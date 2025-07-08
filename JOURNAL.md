@@ -54,3 +54,18 @@ I ended up somehow forcing myself through the problem, so if anyone has some ide
 
 ### Time spent on that day: 5h
 
+# July 8th, 2025
+
+## Research
+Did some searching and came to the conclusion, that 2040 extrusion is too flimsy and decided to swap out the extrusions for 3060.
+I also searched where I can buy the extrusions and found a polish shop that sells custom lenghts for a really reasonable price.
+
+3060 for €0.30/cm and 2020 for €0.12/cm.
+
+
+
+## CAD
+![image](https://github.com/user-attachments/assets/bdf5d816-22e4-4b29-aa4c-e2eab1726dfe)
+
+
+
