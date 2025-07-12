@@ -5,7 +5,9 @@ description: "A fast and sturdy cantilever 3D printer"
 created_at: "2025-07-07"
 ---
 
-**Write a story here**
+My school doesn't have a 3D printer (well it does but it is a broken Makerbot Replicator) so I wanted to change that. With the 350 USD budget from Hackclub I can design a printer that my fellow schoolmates can use to make their designs come to life.
+
+The after many hours of back and fourth I decided that the printer will use CoreXY kinematics for its great speed and compact size.
 
 # 1st entry: July 7th, 2025: Initial research and frame design.
 
@@ -56,7 +58,7 @@ I ended up somehow forcing myself through the problem, so if anyone has some ide
 # 2nd entry: July 8th, 2025
 
 Did some searching and came to the conclusion, that 2040 extrusion is too flimsy and decided to swap out the extrusions for 3060.
-I also searched where I can buy the extrusions and found a polish shop that sells custom lenghts for a really reasonable price.
+I also searched where I can buy the extrusions and found a Polish shop that sells custom lenghts for a really reasonable price.
 
 3060 for €0.30/cm and 2020 for €0.12/cm.
 
@@ -75,7 +77,7 @@ I started the day off with replacing the extrusions and fighting with Fusion a b
 
 The rails were next. They were less of an issue, but with the Fusion magic again, I am having a hard time categorizing the models into components. Please do not inspect the components too close.
 
-The mounting brackets were next. I did several designs and L-shaped mounting brackets that I found on that polish website seems to be the best. I did add a T-shaped bracket to the bottom and normal corner brackets for reinforcment.
+The mounting brackets were next. I did several designs and L-shaped mounting brackets that I found on that Polish website seems to be the best. I did add a T-shaped bracket to the bottom and normal corner brackets for reinforcment.
 
 I found the CAD model for the Micron180 and just took the bed assembly out of the file. ;)
 
@@ -136,3 +138,143 @@ Aimlessly modeling is very time consuming, but when I achive the aim, it gets qu
 ### Time spent that day: 8h
 
 ![image3](/images/image3.png)
+
+# 4th entry: July 10th, 2025
+
+Still thinking about the design of the printer.
+
+The SKR Pico 1.0 that I would like to use beacuse it is so cheap and there is a possibility of using a CAN transiver so you do not have to buy a seperate CAN board.
+
+The SKR Pico has 5 motor drivers - Extruder, X, Y, Z and Z2.
+
+When researching Z axis beds on other printers, I realised that having 3 Z-motors would be advantageous beacuse the bed could trim itself. There would be no need to trim it yourself, just use the Z_TILT_ADJUST in Klipper, just like the Voron Trident.
+
+Then I thought to myself, would I need to swap out the SKR Pico for a board that has drivers for the Z.
+
+But then I realised, if I use a CAN toolhead board, it has a built in TMC2209 for the extruder - I don't need the extruder driver on the board anymore, so I can use that for the 3rd Z motor.
+I did some searching (asking AI) and it is indeed feasable.
+
+I then decided to change out the Z axis design again for the Voron Trident design.
+
+I went to the Trident configurator and for a build size of 180mm^3 it recommended me the frame size of 340x340x430mm - basically the frame size I was already using.
+
+I searched a lot on aliexpress too. I think I had over 100 tabs open at the same time (thank you Zen browser for saving me a bit).
+
+I went down a different rabbit hole of "what if I pivot again and build a cartesian?" but that I shut down as there isn't really any reason to pivot again.
+
+I searched about all the different motors out there. There are a lot of them.
+
+But they have quite awful shipping times. If I buy them now, it will take almost a month to get to me. This is also the reason why I am crunching so hard. Time is of the essense.
+
+I watched a cool video about how to build a 3D printer, it is a bit old at this point (5 years at the time of writing), but still quite a good watch. 
+[How to Build a 3D Printer (The Ultimate Guide)](https://www.youtube.com/watch?v=qub5chyIQ0s&t=5674s)
+
+I was really worried about the shipping costs on the motors. They ballooned way out of porpotion. 
+I was really doubting if there are any cheap motors out there, but then I found Robotdigg.
+
+It is quite a cool site and they had the motors with lead screws that I needed, the shipping was around 30 euros.
+
+I wasn't satisfied yet. Over 120 euros just for Z-axis motors is just too much on a somewhat budget printer.
+
+I had my eye out for the motors on the BOM, but there was a small issue - I could only buy one.
+That made me search for better option, but there weren't any and then I circled back to these.
+
+I do not know what kind of trickery AliExpress does some times, but when I opened the tab in incognito, I finally was able to buy more than one.
+
+The price is around 4 euros more, but I would have liked an option to discard that promotion so I could buy more of them.
+There should have been a pop up that said "Hey, I see you are trying to buy more than 1, would you like to get rid of that exclusive offer?"
+
+But I digress, I finally got some cheaper motors for the Z-axis but the tomfoolery wasn't done just yet.
+
+The A/B motors were also quite the challenge. I searched far and wide for the motors that ended up in my BOM, none were quite good enough. Not enough torque, too hi inductance, not enough current, etc.
+
+There was the shipping problem here as well. As soon as you ordered more than one, the shippiing shot up to around 30 euros. This was double the price of the motors together, so I had to find some other ways.
+
+The way ended up pretty simple. Find some that come in a pack. This eliminates the shipping cost on pretty much in all cases.
+
+I found the 17HE19-2004S motors. They are powerful, have a pretty low inductance and are cheap. They only come in a pack of 3, not 2 that are needed - so I guess one is extra just in case.
+
+---
+
+I started the CAD redesign by removing everything. This day has been heavy on the modelling side.
+
+I remade the entire frame. Slightly modified the dimensions. 
+
+I added the backbrace to the frame for the 3rd Z motor.
+
+I added the linear rails, the stepper motors with the lead screws.
+
+I added the bed, the aluminum braces under it.
+
+I did take the bed holder mechanism from the Voron Trident, very many thanks to the team and the contributers that make that project happen.
+
+As my bed is quite a lot smaller than the Voron Trident's bed, I had to modify half the mechanism to work with my smaller bed as there is enough room for the big and bulky mechanism.
+
+Should have I made the frame bigger? I guess we have to find out.
+
+The margins on the parts are still quite small, maybe even hitting the aluminum bed, I will have to find out when I build the machine and modify it a bit.
+
+Added 3-way corner connectors to the build.
+
+Started designing the gantry.
+
+### Total time spent that day: 8h
+
+# 5th entry: July 11th, 2025
+
+Oh how many different options. I started questioning the corner connectors. Are they even good for a 3D printer? Are these the better option?
+
+I didn't want to use blind joints as they require drilling new holes into the extrusion that I am personally not confortable doing. I could figure it out but I don't want to risk it.
+
+Then I saw the openbuilds corner cubes. They seem good and sturdy. Tapping the ends of the extrusions doesn't seem all that difficult. I was ready to add them to the design when I found out how expensive they are.
+
+I mean they aren't that expensive, but still are quite a bit more expensive than just using corner brackets.
+
+I have to use corner brackets anyway for the bed frame so might as well use them all throughout.
+
+20pcs with hardware is 12 euros as supposed to corner cubes with are 14 euros for 8pcs.
+
+---
+
+I started by replacing all the frame extrusions again. I saw that there are differences from extrusion manufacturer to another in [a YouTube video about blind joints](https://youtu.be/2dvbn0rWA60).
+
+I found the technical drawings of the manufacturer on the [Polish webstore where I found the extrusions](https://hobby-store.pl/) and I started to create a sketch, made almost halfway to a finished sketch and then I found they just have a 3D model available...
+
+I downloaded it and replaced all extrusions on the design with the new one. They are indeed different but not by much and I really doubt it was neccessary.
+
+Started making the gantry.
+
+### Total time spent that day: 5h
+
+# 6th entry: July 12th, 2025
+
+Today started off different. No researching, just modelling.
+
+Made the X-gantry belt/extrusion holder.
+It was actually not that bad. I found models for heatset inserts, F695 bearings.
+
+The real complexity came when I finished the gantry and noticed that I do not have enough room in front of the bed for the toolhead.
+
+As I want to use the eddy probe and use the tapping functionality in the [eddy-ng project](https://github.com/vvuk/eddy-ng), the toolhead needs to fit over the bed.
+
+This would not have been possible with the current design, so I needed to make the frame bigger.
+
+This meant a lot of backtracking and modifying the existing design.
+
+Uhmm, this is kinda weird. After coming back to this, I got recommended a ModBot YouTube video exactly about eddy-ng. Perhaps he saw the project the same way I did, Voron discord server.
+
+The A/B motors mounts were next. They were pretty complex, I am doubting my abilities to create a working model, but when I get my hands on the parts and assemble it, I can tweak the models.
+
+I had to figure out how to make the belt tensioner. I first thought of a way where the motors move, but then I thought of a system where the front pulleys get pulled closer to the front.
+
+When I had done those, I went and made the electronics bay. I found a model of MeanWell PSU I am planning to use, but as the electronics bay uses DIN rails, the mounts are easily interchangeable.
+
+The diary entries get shorter and shorter as I have less and less time, but I still have managed to crunch my way through. I just need to make the toolhead, finish the electronics and the BOM.
+
+I want to add a nozzle scruber to the bed assembly too, but that stage comes a bit later.
+
+That is about it for today. I kinda need to fix my sleep schedule, all these late night CAD sessions aren't probably good for me.
+
+### Total time spent that day: 8h
+
+
