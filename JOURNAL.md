@@ -5,6 +5,8 @@ description: "A fast and sturdy cantilever 3D printer"
 created_at: "2025-07-07"
 ---
 
+### Total time spent on project at the submitting mark: around 67h
+
 My school doesn't have a 3D printer (well it does but it is a broken Makerbot Replicator) so I wanted to change that. With the 350 USD budget from Hackclub I can design a printer that my fellow schoolmates can use to make their designs come to life.
 
 The after many hours of back and fourth I decided that the printer will use CoreXY kinematics for its great speed and compact size.
@@ -220,6 +222,8 @@ Started designing the gantry.
 
 ### Total time spent that day: 8h
 
+![image4](images/image4.png)
+
 # 5th entry: July 11th, 2025
 
 Oh how many different options. I started questioning the corner connectors. Are they even good for a 3D printer? Are these the better option?
@@ -245,6 +249,8 @@ I downloaded it and replaced all extrusions on the design with the new one. They
 Started making the gantry.
 
 ### Total time spent that day: 5h
+
+![image5](images/image5.png)
 
 # 6th entry: July 12th, 2025
 
@@ -277,4 +283,133 @@ That is about it for today. I kinda need to fix my sleep schedule, all these lat
 
 ### Total time spent that day: 8h
 
+![image6](images/image6.png)
 
+# 7th entry: July 13th, 2025
+
+Finished the CoreXY printer, but when looking over the BOM it is really expensive. I might choose to change it out to cartesian platform or even go back to cantilever.
+
+Spent a lot of time researching on how to make the CoreXY cheaper, but to no avail. Still seems too expensive.
+
+After that I made the decision to move to a cartesian platform.
+
+I made the frame out of 3030 extrusion for the cartesian printer, but the problem is joining the extrusions together, the frame needs blind joints, but I do not know if I can do it. Would love it if I didn't have to do blind joints.
+
+Need to reaserch a bit more.
+
+### Total time spent that day: 2h
+
+![image7](images/image7.png)
+![image8](images/image8.png)
+
+# 8th entry: July 14th, 2025
+
+Started with research. How do save costs on a 3D printer while still maintaining speed?
+
+Saw that the RatRig V-minion is a good printer with good speed, but it is not available anymore and is a bit too expensive.
+
+Decided to make a cantilever design inspiried by the V-minion. I do not like that it has a lead screw Z and would like to make the electronics mount on the printer and not be on a seperate box.
+
+### Total time spent that day: 2h
+
+![image9](images/image9.png)
+
+# 9th entry: July 15th, 2025
+
+Made some improvements to the printer. The Z axis is belted, the bed is still 180x180mm big, but the footprint is smaller.
+
+Started making the z axis and bed. 
+
+Saw from the Micron180 that the Z-axis should have a gearbox of some sorts to stop the X-axis dropping down.
+
+Decided to make the gearbox similar to the one on the Micron. I will adapt that onto the cantilever printer.
+
+The bed was quite simple. I found a 180x180mm bed for cheap. The Lerdge iX print bed. Its heatbed is only about 25 euros and has the mounting holes close together, so the plate under it doesn't need to be that big. 
+
+The problem with the bed is that it is quite thin and doesn't have the power of a silicone heater, but I think that it will be good enough.
+
+The plate should be made from aluminium, but that is quite expesive, so I think I will try and make it using carbon fiber infused filament.
+
+Search for suitable filaments and found the PLA-CF from Bambu Lab. It doesn't have the bending modulus of something like Nylon, but it is pretty close.
+
+Bending modulus is the bending force the filament can withstand - or so I think.
+
+I just need to add some silicone spacers so the hot bed doesn't touch the plate. Might still need to make the plate out of aluminium if this doesn't work.
+
+I uploaded the plate design to JLCCNC and the quote was around 20 euros plus shipping. Not too bad, but that still would eat into my budget more than I would like it to.
+
+I found the JLCMC website, even though I have ordered from JLCPCB in the past, never have my eyes wondered so far that I find this website. Looks cheaper than AliExpress but I will have to search this site longer at a later date.
+
+I can get a whole Voron 2.4 350mm spec frame for 20 EUROS! My jaw dropped when I saw that.
+Literally a similar frame on AliExpress is 77 euro. Holy moly. What a find. 
+
+The best part is the global direct line shipping took me like under a week the last time I ordered from JLCPCB. I have to find out more about this website.
+
+### Total time spent that day: 2h
+
+![image10](images/image10.png)
+
+# 10th entry: July 16th, 2025
+
+Today we got back to grinding.
+
+Made/finished the Z-axis design. The Z-axis uses a 20T-80T gearbox, so the gear ratio is 4:1. This should be enough to hold the printer up. If not, I could switch the 20T out for a 16T for a 5:1 gear ratio.
+
+Made the Y-axis parts, like the motor mount, idler mount and plate mount. The plate is quite sketchy, but if something ends up being wrong after I send it to JLCCNC then I'd be screwed. So I will try the printed plate and if that fails, I will get a aluminium plate.
+
+Added a few things to the BOM, like the bearings and other knick-knacks.
+
+Almost finished design. I just need to make the X-axis and toolhead.
+I wanted to just use the EVA3 toolhead system, but we aren't allowed to just copy parts, so I will make my own.
+
+The printer is almost ready. I need to finish it fast as the shipping times get longer and longer. 
+
+Oh, and also need to make the electronics bay.
+
+It really is a race against the clock.
+
+### Total time spent that day: 6h
+
+![image11](images/image11.png)
+
+# 11th entry, July 17th, 2025
+
+The day has been mostly designing, but also reasearching different hotend options. I had already picked out the TZ V6 hotend, but I wanted to see what other options there are. 
+There aren't a lot of hotends that specify how much plastic they can push through, so that makes it a lot harder.
+
+The EVA toolhead is a refrence, it will be replaced by my design.
+
+I did end up just sticking with the TZ V6.
+
+I designed a toolhead too. The main inspiration is the EVA toolhead, as I like the modularity it offers if I decide to swap things out.
+
+The hotend is cooled with a 4010 axial fan to minimize heat creep and the part cooling is using two 5015 blower fans.
+
+It probably is a bit overkill, but I want to make the printer go brrr fast and I need to cool the part fast for that.
+
+### Total time spent that day: 8h
+
+![image12](images/image12.png)
+
+# 12th entry: July 27th, 2025
+
+I have been really really busy and haven't had much time to finish the design, which is sad as I do not have enough time to build it before the 7th of August.
+
+I need to check over my PC as Fusion is really really slow and it is really hard to design.
+
+The printer is done. I have finally finished it.
+
+Today I did the electronics box, the PSU mount, finished the toolhead, all the other bits and pieces.
+
+The electronics box was harder than I expected as I do not have anything to base the design off of in the real world. Is 50mm of clearence enough or do I need more? Can I make I smaller, etc.
+
+It has been quite the journey and I have learnt a lot. This is the first printer I have designed and it shows. I have taken inspiration from already made printers in the hope of not burning anything down and making sure everything works.
+
+The only challenge now is to make it in real life and to tweak and tinker with the design even more to finalize the design. 
+
+I need to look over the BOM and sumbit it.
+
+### Total time spent that day: 6h
+
+![image13](images/image13.png)
+![image14](images/image14.png)
