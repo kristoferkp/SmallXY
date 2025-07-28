@@ -70,7 +70,7 @@ Printer Sugar is a fast cantilever 3D printer with quality components and a rigi
 |2020 M5 t-nuts             |                                               |0  |3,13 €     |0,00 €  |0,00 €     |https://www.aliexpress.com/item/1005007587044629.html                                                                       |
 |Spade crimping kit         |                                               |0  |21,92 €    |0,00 €  |0,00 €     |https://a.aliexpress.com/_EJTbUyW
 |16AWG wire                 |                                               |0  |4,41 €     |0,00 €  |0,00 €     |https://a.aliexpress.com/_EGvjSkQ
-
+|XH 2.54 kit                |                                               |0  |3,41 €     |0,00 €  |0,00 €     |https://a.aliexpress.com/_EvVOt9y
 
 ## Credits
 - Big thanks to the Ratrig community and the team behind Ratrig for the inspiration and refrence for the design.
