@@ -1,5 +1,5 @@
 ---
-title: "3D Printer (name tbd)"
+title: "Printer Sugar"
 author: "Kristofer P"
 description: "A fast and sturdy cantilever 3D printer"
 created_at: "2025-07-07"
