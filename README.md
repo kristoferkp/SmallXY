@@ -68,7 +68,8 @@ Printer Sugar is a fast cantilever 3D printer with quality components and a rigi
 |M8 30mm                    |                                               |0  |3,72 €     |0,00 €  |0,00 €     |https://www.aliexpress.com/item/32810872544.html                                                                            |
 |3030 M6 t-nuts             |                                               |0  |5,58 €     |0,00 €  |0,00 €     |https://www.aliexpress.com/item/1005007587044629.html                                                                       |
 |2020 M5 t-nuts             |                                               |0  |3,13 €     |0,00 €  |0,00 €     |https://www.aliexpress.com/item/1005007587044629.html                                                                       |
-
+|Spade crimping kit         |                                               |0  |21,92 €    |0,00 €  |0,00 €     |https://a.aliexpress.com/_EJTbUyW
+|16AWG wire                 |                                               |0  |4,41 €     |0,00 €  |0,00 €     |https://a.aliexpress.com/_EGvjSkQ
 
 
 ## Credits
